@@ -4,11 +4,7 @@
 const apologiesData = [
     {
         date: "2025-01-23",
-        text: "I'm sorry for the times I wasn't there when you needed me. I'm sorry for the moments I let my own struggles cloud my judgment and made you feel alone.\n\nYou deserve someone who shows up consistently, who listens without judgment, and who makes you feel safe. I'm working on being that person for you, every single day."
-    },
-    {
-        date: "2025-01-20",
-        text: "I apologize for not communicating better. I know how important it is to you, and I let you down.\n\nI'm learning to express myself more clearly and to be more open about what I'm feeling. Your patience means everything to me, and I promise to do better."
+        text: "See Chintu, I don't want to see you like this, I don't want to bother your mental health since your periods are also coming.\n\I love you so much and being this distant from you makes things difficult for me, I can't see you like this staying 600 km away from you. \n These times I just want to stay with you calm you down fix the things and hug you tightly and kiss you on your forehead. \n You are the person who matters to me the most and I am regretful for what I did in past and will always be, \n But one thing, I never want to loose you LOVE!, \n\I I LOVE YOU! <3"
     }
     // Add more apologies here as needed
     // Format: { date: "YYYY-MM-DD", text: "Your apology text here...\n\nUse double newlines for paragraph breaks" }
