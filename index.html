@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Raanu • Chintu</title>
+  <script type="module" crossorigin src="/assets/index-Cpz26c4P.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bv_Jntdu.css">
+</head>
+<body>
+    <!-- Atmospheric Background -->
+    <div class="background-overlay"></div>
+    <div class="smoke-overlay"></div>
+    <canvas id="grain-canvas"></canvas>
+
+    <!-- Floating Audio Player -->
+    <div class="audio-player" id="audioPlayer">
+        <button class="play-btn" id="playBtn">
+            <span class="play-icon">▶</span>
+            <span class="btn-label">Our Sound</span>
+        </button>
+        <audio id="audio" loop preload="auto">
+            <source src="/apocalypse.mp3" type="audio/mpeg">
+            <source src="/apocalypse.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Wave Visualizer -->
+    <canvas id="visualizer-canvas"></canvas>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Greeting Section -->
+        <section class="greeting-section" id="greeting">
+            <h1 class="greeting-text">
+                <span class="greeting-line" id="greetingLine2">Hi Chintu</span>
+            </h1>
+        </section>
+
+        <!-- Why You Matter - Bento Grid -->
+        <section class="bento-section" id="whyYouMatter">
+            <h2 class="section-title">Why You Matter</h2>
+            <div class="bento-grid">
+                <div class="bento-tile large">
+                    <h3>Your Smile</h3>
+                    <p>Lights up my entire world, every single day.</p>
+                </div>
+                <div class="bento-tile">
+                    <h3>Your Strength</h3>
+                    <p>Inspires me to be better, always.</p>
+                </div>
+                <div class="bento-tile">
+                    <h3>Your Heart</h3>
+                    <p>So pure, so beautiful, so full of love.</p>
+                </div>
+                <div class="bento-tile large">
+                    <h3>Our Journey</h3>
+                    <div class="love-counter" id="loveCounter">
+                        <div class="counter-item">
+                            <span class="counter-value" id="days">0</span>
+                            <span class="counter-label">Days</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-value" id="hours">0</span>
+                            <span class="counter-label">Hours</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-value" id="minutes">0</span>
+                            <span class="counter-label">Minutes</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-value" id="seconds">0</span>
+                            <span class="counter-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-tile">
+                    <h3>Your Dreams</h3>
+                    <p>I'll support every single one.</p>
+                </div>
+                <div class="bento-tile">
+                    <h3>Your Voice</h3>
+                    <p>The most beautiful sound I know.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Miles & Moments Timeline -->
+        <section class="timeline-section" id="timeline">
+            <h2 class="section-title">The Miles & Moments</h2>
+            <div class="timeline-container">
+                <div class="timeline-item" data-scroll>
+                    <div class="timeline-image">
+                        <div class="image-placeholder">Journey Begins</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Where It Started</h3>
+                        <p>Every moment since has been building to this.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scroll>
+                    <div class="timeline-image">
+                        <div class="image-placeholder">Late Nights</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Late-Night Support</h3>
+                        <p>Countless conversations that carried us through.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scroll>
+                    <div class="timeline-image">
+                        <div class="image-placeholder">Surprises</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>The Surprises</h3>
+                        <p>Each one crafted with love, just for you.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scroll>
+                    <div class="timeline-image">
+                        <div class="image-placeholder">Travels</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>The Adventures</h3>
+                        <p>Miles traveled, memories made, together.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scroll>
+                    <div class="timeline-image">
+                        <div class="image-placeholder">Today</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>And Today</h3>
+                        <p>Still growing, still choosing each other, always.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open When Vault -->
+        <section class="vault-section" id="vault">
+            <h2 class="section-title">Open When</h2>
+            <div class="vault-container">
+                <button class="vault-button" data-vault="miss">
+                    <span>When you miss me</span>
+                </button>
+                <button class="vault-button" data-vault="reminder">
+                    <span>When you need a reminder<br>of your worth</span>
+                </button>
+                <button class="vault-button" data-vault="sad">
+                    <span>When you're feeling down</span>
+                </button>
+                <button class="vault-button" data-vault="doubt">
+                    <span>When you doubt yourself</span>
+                </button>
+                <button class="vault-button" data-vault="love">
+                    <span>When you need to feel loved</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with endless love, just for you.</p>
+        </footer>
+    </main>
+
+    <!-- Vault Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+</body>
+</html>
