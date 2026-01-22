@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apologies â€¢ For Chintu</title>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bv_Jntdu.css">
+    <link rel="stylesheet" crossorigin href="./apologies.css">
+</head>
+<body>
+    <!-- Atmospheric Background -->
+    <div class="background-overlay"></div>
+    <div class="smoke-overlay"></div>
+    <canvas id="grain-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./apologies.html" class="nav-link active">Apologies</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content apologies-main">
+        <section class="apologies-section">
+            <h1 class="apologies-title">Apologies</h1>
+            <p class="apologies-intro">Words I wish I had said sooner, and actions I'm committed to taking.</p>
+            <div id="apologies-container" class="apologies-container">
+                <!-- Apologies will be rendered here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with endless love, just for you.</p>
+    </footer>
+
+    <script src="./apologies-data.js"></script>
+    <script src="./apologies.js"></script>
+    <script>
+        // Initialize grain canvas
+        class GrainCanvas {
+            constructor(id) {
+                this.canvas = document.getElementById(id);
+                if (!this.canvas) return;
+                this.ctx = this.canvas.getContext("2d");
+                this.resize();
+                window.addEventListener("resize", () => this.resize());
+                this.animate();
+            }
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+            animate() {
+                const imageData = this.ctx.createImageData(this.canvas.width, this.canvas.height);
+                const data = imageData.data;
+                for (let i = 0; i < data.length; i += 4) {
+                    const value = Math.random() * 255;
+                    data[i] = value;
+                    data[i + 1] = value;
+                    data[i + 2] = value;
+                    data[i + 3] = 30;
+                }
+                this.ctx.putImageData(imageData, 0, 0);
+                setTimeout(() => {
+                    requestAnimationFrame(() => this.animate());
+                }, 100);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            new GrainCanvas("grain-canvas");
+        });
+    </script>
+</body>
+</html>
